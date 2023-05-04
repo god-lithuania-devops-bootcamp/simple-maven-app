@@ -32,6 +32,6 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_R }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL_RA }}
+          SONAR_TOKEN_R: ${{ secrets.SONAR_TOKEN_R }}
+          SONAR_HOST_URL_RA: ${{ secrets.SONAR_HOST_URL_RA }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
